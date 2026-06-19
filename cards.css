@@ -26,7 +26,6 @@
   border-radius: 10px;
   cursor: pointer;
   transition: transform 0.3s;
-  margin-top: 50%;
 }
 
 .card::before {
@@ -55,11 +54,22 @@
 }
 
 .cards {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 350px);
   justify-content: center;
   gap: 50px;
   margin: 5px;
   margin-top: 35px;
+}
+
+.cards a:nth-child(4) {
+  grid-column: 1 / 2;
+  justify-self: end;
+}
+
+.cards a:nth-child(5) {
+  grid-column: 2 / 3;
+  justify-self: start;
 }
 
 .cards a {
